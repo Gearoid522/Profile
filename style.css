@@ -127,11 +127,11 @@ header {
     }
 
     .header-right .menu{
-        display: block;
-    }
-    
-    .header-right .show{
         display: none;
+    }
+
+    .header-right .show{
+        display: block;
     }
 
     .button-header {
