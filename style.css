@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500;900&family=Sigmar&display=swap');
+
+:root {
+    --theme-color-01: #04ca9f;
+    --theme-color-02: #056d63;
+    --theme-color-03: #5c9c96;
+    --theme-color-04: #adb4b4;
+    --theme-color-05: #3a7e7d;
+    --theme-color-06: #000000;
+    --theme-color-07: #393939;
+
+    --font-size-h1: 36px;
+    --font-size-h2: 16px;
+}
+
+/* div {
+    border: red solid 1px;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Sigmar', cursive;
+}
+
+body {
+    background-color: var(--theme-color-07);
+    color: var(--theme-color-01);
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--theme-color-06);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header-right .menu{
+    display: flex;
+}
+
+.logo {
+    width: 160px;
+    margin: 10px 10px;
+    text-align: center;
+    font-size: var(--font-size-h1);
+}
+
+.button-header {
+    width: 100px;
+    margin: 10px 10px;
+    padding: 5px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: var(--font-size-h2);
+}
+
+.button-header:hover {
+    background-color: var(--theme-color-01);
+    color: var(--theme-color-06);
+    border-radius: 5px;
+}
+
+.button-header-active {
+    background-color: var(--theme-color-01);
+    color: var(--theme-color-06);
+    border-radius: 5px;
+}
+
+.button-menu {
+    display: none;
+    margin-right: 40px;
+    size: 40px, 40px;
+}
+
+.button-menu .bar1,
+.button-menu .bar2,
+.button-menu .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.button-menu .show .bar1 {
+    transform: translate(0, 11px) rotate(45deg);
+}
+
+.button-menu .show .bar2 {
+    opacity: 0;
+}
+
+.button-menu .show .bar3 {
+    transform: translate(0, -11px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 960px) {
+
+    .header-left {
+        margin-left: 20px;
+    }
+
+    .header-right {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background-color: var(--theme-color-06);
+        display: block;
+    }
+
+    .header-right .menu{
+        display: block;
+    }
+    
+    .header-right .show{
+        display: none;
+    }
+
+    .button-header {
+        width: 40%;
+        margin: 10px auto;
+        padding: 5px 0;
+    }
+
+    .button-menu {
+        display: inline-block;
+        cursor: pointer;
+    }
+}

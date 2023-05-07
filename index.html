@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gearoid's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">Gearoid</div>
+        </div>
+        <div class="header-right">
+            <div class="menu">
+                <div class="button-header button-home button-header-active">Home</div>
+                <div class="button-header button-about">About</div>
+                <div class="button-header button-experience">Experience</div>
+                <div class="button-header button-expertise">Expertise</div>
+                <div class="button-header button-projects">Projects</div>
+                <div class="button-header button-reference">Reference</div>
+            </div>
+        </div>
+        <div class="button-menu">
+            <div onclick="OnclickButtonMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var showingHeaderButton = false;
+
+        function OnclickButtonMenu(x) {
+            x.classList.toggle("show");
+            document.getElementsByClassName("menu")[0].classList.toggle("show");
+            showingHeaderButton = !showingHeaderButton;
+        }
+    </script>
+</body>
+
+</html>
