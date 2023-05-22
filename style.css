@@ -8,6 +8,14 @@
     --theme-color-05: #3a7e7d;
     --theme-color-06: #000000;
     --theme-color-07: #393939;
+    --theme-color-08: #00000080;
+
+    --theme-color-purple-01:#7D2A9B;
+    --theme-color-blue-01:#E0E9F5;
+    --theme-color-blue-02:#577FAA;
+    --theme-color-green-01:#34FCED;
+    --theme-color-green-02:#00C2B5;
+    --theme-color-green-03:#008B80;
 
     --font-size-h1: 36px;
     --font-size-h2: 16px;
@@ -70,6 +78,7 @@ header {
     text-align: center;
     transition: all 0.3s ease;
     font-size: var(--font-size-h2);
+    color: var(--theme-color-01);
 }
 
 .button-header:hover {
@@ -95,7 +104,7 @@ header {
 .button-menu .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: var(--theme-color-07);
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -112,6 +121,32 @@ header {
     transform: translate(0, -11px) rotate(-45deg);
 }
 
+.section{
+    /* border: red 1px solid; */
+    height: 160px;
+    padding-top: 10px;
+    padding-left: 16px;
+}
+
+.home{
+    background-color: var(--theme-color-02);
+}
+.about{
+    background-color: var(--theme-color-05);
+}
+.experience{
+    background-color: var(--theme-color-02);
+}
+.expertise{
+    background-color: var(--theme-color-05);
+}
+.projects{
+    background-color: var(--theme-color-02);
+}
+.reference{
+    background-color: var(--theme-color-05);
+}
+
 @media only screen and (max-width: 960px) {
 
     .header-left {
@@ -122,8 +157,9 @@ header {
         position: absolute;
         top: 80px;
         width: 100%;
-        background-color: var(--theme-color-06);
+        background-color: var(--theme-color-08);
         display: block;
+        transition: 100s;
     }
 
     .header-right .menu{

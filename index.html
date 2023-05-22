@@ -15,16 +15,29 @@
         </div>
         <div class="header-right">
             <div class="menu">
-                <div class="button-header button-home button-header-active">Home</div>
-                <div class="button-header button-about">About</div>
-                <div class="button-header button-experience">Experience</div>
-                <div class="button-header button-expertise">Expertise</div>
-                <div class="button-header button-projects">Projects</div>
-                <div class="button-header button-reference">Reference</div>
+                <a href="#home">
+                    <div class="button-header button-home button-header-active" onclick="OnclickHeaderButton(this)">Home
+                    </div>
+                </a>
+                <a href="#about">
+                    <div class="button-header button-about" onclick="OnclickHeaderButton(this)">About</div>
+                </a>
+                <a href="#experience">
+                    <div class="button-header button-experience" onclick="OnclickHeaderButton(this)">Experience</div>
+                </a>
+                <a href="#expertise">
+                    <div class="button-header button-expertise" onclick="OnclickHeaderButton(this)">Expertise</div>
+                </a>
+                <a href="#projects">
+                    <div class="button-header button-projects" onclick="OnclickHeaderButton(this)">Projects</div>
+                </a>
+                <a href="#reference">
+                    <div class="button-header button-reference" onclick="OnclickHeaderButton(this)">Reference</div>
+                </a>
             </div>
         </div>
         <div class="button-menu">
-            <div onclick="OnclickButtonMenu(this)">
+            <div onclick="OnclickMenuButton(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -32,11 +45,48 @@
         </div>
     </header>
 
+    <div class="section home" id="home">
+        Home
+    </div>
+
+    <div class="section about" id="about">
+        About
+    </div>
+
+    <div class="section experience" id="experience">
+        Experience
+    </div>
+
+    <div class="section expertise" id="expertise">
+        Expertise
+    </div>
+
+    <div class="section projects" id="projects">
+        Projects
+    </div>
+
+    <div class="section reference" id="reference">
+        Reference
+    </div>
+
     <script>
-        function OnclickButtonMenu(x) {
+        function OnclickMenuButton(x) {
             x.classList.toggle("show");
             document.getElementsByClassName("menu")[0].classList.toggle("show");
         }
+
+        function OnclickHeaderButton(x) {
+            for (e of document.getElementsByClassName("button-header-active")) {
+                e.classList.remove("button-header-active");
+            }
+            x.classList.add("button-header-active");
+        }
+
+        window.onscroll = function (e) {  
+            for(e of document.getElementsByClassName("show")){                
+                e.classList.remove("show");
+            }
+        } 
     </script>
 </body>
 
