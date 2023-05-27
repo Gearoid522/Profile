@@ -32,6 +32,11 @@
     text-decoration: none;
     font-family: 'Noto Sans HK', sans-serif;
     font-family: 'Sigmar', cursive;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: #04ca9f;
 }
 
 body {
@@ -69,6 +74,7 @@ header {
     margin: 10px 10px;
     text-align: center;
     font-size: var(--font-size-h1);
+    color: var(--theme-color-01);
 }
 
 .button-header {
@@ -123,28 +129,41 @@ header {
 
 .section{
     /* border: red 1px solid; */
-    height: 160px;
+    height: 600px;
     padding-top: 10px;
     padding-left: 16px;
+    display: flex;
+    position: sticky;
 }
 
 .home{
     background-color: var(--theme-color-02);
+    top: 0px;
 }
 .about{
     background-color: var(--theme-color-05);
+    top: 0px;
 }
 .experience{
     background-color: var(--theme-color-02);
+    top: 0px;
 }
 .expertise{
     background-color: var(--theme-color-05);
+    top: 0px;
 }
 .projects{
     background-color: var(--theme-color-02);
+    top: 0px;
 }
 .reference{
     background-color: var(--theme-color-05);
+    top: 0px;
+}
+
+footer{
+    height: 80px;
+    background-color: var(--theme-color-07);
 }
 
 @media only screen and (max-width: 960px) {
@@ -160,6 +179,7 @@ header {
         background-color: var(--theme-color-08);
         display: block;
         transition: 100s;
+        z-index: 1;
     }
 
     .header-right .menu{

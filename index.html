@@ -11,7 +11,9 @@
 <body>
     <header>
         <div class="header-left">
-            <div class="logo">Gearoid</div>
+            <a href="">
+                <div class="logo">Gearoid</div>
+            </a>
         </div>
         <div class="header-right">
             <div class="menu">
@@ -45,29 +47,33 @@
         </div>
     </header>
 
-    <div class="section home" id="home">
-        Home
+    <div class="sections">
+        <div class="section home" id="home" onclick="OnclickSectionHeader(this)">
+            <a href="#home">Home</a>
+        </div>
+
+        <div class="section about" id="about" onclick="OnclickSectionHeader(this)">
+            <a href="#about">About</a>
+        </div>
+
+        <div class="section experience" id="experience" onclick="OnclickSectionHeader(this)">
+            <a href="#experience">Experience</a>
+        </div>
+
+        <div class="section expertise" id="expertise" onclick="OnclickSectionHeader(this)">
+            <a href="#expertise">Expertise</a>
+        </div>
+
+        <div class="section projects" id="projects" onclick="OnclickSectionHeader(this)">
+            <a href="#projects">Projects</a>
+        </div>
+
+        <div class="section reference" id="reference" onclick="OnclickSectionHeader(this)">
+            <a href="#reference">Reference</a>
+        </div>
     </div>
 
-    <div class="section about" id="about">
-        About
-    </div>
-
-    <div class="section experience" id="experience">
-        Experience
-    </div>
-
-    <div class="section expertise" id="expertise">
-        Expertise
-    </div>
-
-    <div class="section projects" id="projects">
-        Projects
-    </div>
-
-    <div class="section reference" id="reference">
-        Reference
-    </div>
+    <footer></footer>
 
     <script>
         function OnclickMenuButton(x) {
@@ -82,11 +88,18 @@
             x.classList.add("button-header-active");
         }
 
-        window.onscroll = function (e) {  
-            for(e of document.getElementsByClassName("show")){                
+        window.onscroll = function (e) {
+            for (e of document.getElementsByClassName("show")) {
                 e.classList.remove("show");
             }
-        } 
+        }
+
+        function OnclickSectionHeader(e) {
+            e.style.position = "relative";
+            setTimeout(() => {
+                e.style.position = "sticky";
+            }, 1)
+        }
     </script>
 </body>
 
